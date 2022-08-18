@@ -1,0 +1,77 @@
+/**
+ * @infor 象棋样式表
+ * @path  ./css/chess.css
+ */
+
+#canvasWrap {  /* 使用的id属性用---画布大小# */
+	width: 600px;
+	height: 550px;
+	margin-left: 40px;
+	margin-top: 30px;
+	
+}
+
+#curActive {
+	font-size: 20px;
+	font-weight: bold;
+	/*text-align: center;*/
+	/*margin-left: 230px;*/
+}
+.container{ /* 使用的class属性用. */
+	position: absolute;
+	left:135px;
+	top:400px;
+	
+}
+.container1{
+	background: url(login.jpg);
+	background-size:400px 800px;
+	background-repeat:no-repeat;
+	position: absolute;
+	left:65px;
+	top:120px;
+	
+}
+.container2{
+	background: url(back1.jpg);  /* 使用的图片 */
+	background-size:400px 600px; /* 限定图片大小 */
+	background-repeat:no-repeat; /* 不重复层叠图片 */
+	position: absolute; /* 固定位置 */
+
+}
+#canvas {
+	float: left;
+	background: url(board_chess.png);
+	background-size:300px 320px
+}
+.battleInfo{
+	color:blue;
+	text-align: center;
+	/*margin:10px 0;*/
+}
+.battleInfo i{
+	/*margin:0 10px;*/
+	font-style:normal;
+}
+.redTeam{
+	color:red;
+	font-size:10px;
+	font-weight: bolder;
+}
+.blackTeam{
+	color:black;
+	font-size:10px;
+	font-weight: bolder;
+}
+.currentTeam span{
+	font-size:20px;
+	color:red;
+}
+table{
+	margin-top:10px;
+}
+table tr th,table tr td{
+	color:rgb(211, 29, 147);
+	width:40px;
+	height:10px;
+}
