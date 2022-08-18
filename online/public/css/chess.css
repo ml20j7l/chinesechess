@@ -1,9 +1,9 @@
 /**
- * @infor 象棋样式表
+ * @infor Chess style
  * @path  ./css/chess.css
  */
 
-#canvasWrap {  /* 使用的id属性用---画布大小# */
+#canvasWrap {  /* canvas style */
 	width: 600px;
 	height: 550px;
 	margin-left: 40px;
@@ -17,7 +17,7 @@
 	/*text-align: center;*/
 	/*margin-left: 230px;*/
 }
-.container{ /* 使用的class属性用. */
+.container{ /* class style . */
 	position: absolute;
 	left:135px;
 	top:400px;
@@ -33,10 +33,10 @@
 	
 }
 .container2{
-	background: url(back1.jpg);  /* 使用的图片 */
-	background-size:400px 600px; /* 限定图片大小 */
-	background-repeat:no-repeat; /* 不重复层叠图片 */
-	position: absolute; /* 固定位置 */
+	background: url(back1.jpg);  /* image */
+	background-size:400px 600px; /* size */
+	background-repeat:no-repeat; 
+	position: absolute; 
 
 }
 #canvas {

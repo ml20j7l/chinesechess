@@ -1,5 +1,5 @@
 /**
- * @infor 初始化路由
+ * @infor Initialize Route
  * @path  ./controller/index.js
  * 
  */
@@ -11,38 +11,38 @@ const io = require('socket.io')(http);
 const bodyParser = require("body-parser");
 const path = require('path');
 const urlencodedParser = bodyParser.urlencoded({ extended: false })
-const chalk = require('chalk');//打印样式美化
-const ip = require('ip') //在局域网内获取一个可用的ip--路由地址
+const chalk = require('chalk');//Beautify Style
+const ip = require('ip') //Obtain an available IP -- routing address in the LAN
 
-// 初始化引用
+// Initialize Reference
 const initApp = () => {
-	//首页路由
+	//Homepage route
 	app.get("/",function(req,res){
 		res.sendFile(path.join(__dirname, "../views/chess.html"));
 	})
 
-	//其他路由
+	//other route
 	app.get("/:view",function(req,res){
 		res.sendFile(path.join(__dirname, "../views/"+req.params.view+".html"));
 	})
 
-	//网站图标
+	
 	// app.get("/favicon.ico",function(req,res){
 	// 	res.sendFile(path.join(__dirname, "../public/img/icon.png"));
 	// })
 
-	//静态文件保存public文件夹
+	//static files in public 
 	app.use(express.static(path.join(__dirname, '../public')));
 
-	// post请求
+	//Post request
 	app.post("/postFormData",urlencodedParser,function(req,res){
 		res.send(req.body.value);
 	})
 
-	// 监听端口，控制台打印提示
+	// Listening port
 	let port = 8882
 	app.listen(port);
-	console.log(`server is started by port ${port}`);//控制台-console
+	console.log(`server is started by port ${port}`);//Print in console
 	console.log(` - Local:   ${chalk.green(`http://localhost:${port}/login`)}`)
 	console.log(` - Network: ${chalk.green(`http://${ip.address()}:${port}/login`)}`)
 }

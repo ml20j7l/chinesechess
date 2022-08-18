@@ -1,12 +1,12 @@
 /**
- * @infor 通用工具类
+ * @infor util
  * @path  ./js/utils.js
  */
 
 /**
- * 获取地址栏参数
- * @param  {string} name 参数名称
- * @return {string}      返回参数值
+ * Get address bar parameters
+ * @param  {string} name 
+ * @return {string}      
  */
 function getQueryString(name){
   var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");   
@@ -15,9 +15,9 @@ function getQueryString(name){
 }
 
 /**
- * 提示框
- * @param  {string}   msg      消息
- * @param  {Function} callback 回调方法
+ * tooltip
+ * @param  {string}   msg      
+ * @param  {Function} callback 
  * @return void
  */
 function tipMsg(msg,callback){

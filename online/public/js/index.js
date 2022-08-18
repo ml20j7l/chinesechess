@@ -1,25 +1,25 @@
 /**
- * @infor 象棋前端主文件入口
+ * @infor Front page entry
  * @path  ./js/index.js
  */
 
 $(document).ready( _ => {
 
-	//获取地址栏参数
+	//get address bar parameters
 	$('#username').html(getQueryString('username'));
-	//判断是否登陆
+	//determine whether to log in
 	if(!$('#username').html())
 		window.location.href = '/login';
 
-	// 初始化象棋
+	// initialize chess
 	let cChess = new ChinaChess()
 
-	//设置等待下棋
+	//set up waiting to play chess
 	wait();
 })
 
 /**
- * 等待中，简易动效
+ * waiting
  * @return void
  */
 function wait () {
@@ -36,5 +36,5 @@ function wait () {
 				$('.currentTeam>i').html('.');
 				break;
 		}
-	}, 500); //0.5秒跳动一次
+	}, 500); //0.5s change
 }

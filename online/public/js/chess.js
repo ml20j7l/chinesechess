@@ -1,34 +1,34 @@
 /**
- * @infor 象棋类
+ * @infor chess class
  * @path  ./js/chess.js
  * @user  xsq
  * @date  2020-04-28 11:26:49
  */
 
 class ChinaChess {
-	#sendData = {};//发送的数据
-	#curActive = 'red';//当前持方
+	#sendData = {};
+	#curActive = 'red';//Current Player
 	
 	constructor (radius = 15, grid = 30, ws = 'ws://localhost:3006') {
-		this.radius = radius;//旗子半径
-		this.grid = grid;//网格半径
-		this.ws = new WebSocket(ws);//websocket实例
+		this.radius = radius;//chess pieces radius
+		this.grid = grid;//grid length
+		this.ws = new WebSocket(ws);//websocket instance
 		let canvas = document.getElementById("canvas");
 		this.chessBoard = canvas.getContext("2d");
-		this.initChessBoard();//初始化棋盘
-		this.initChess();//初始化棋子
-		this.addEvent();//添加事件
-		this.sendMessage();//发送、接收数据
+		this.initChessBoard();//Initialize chess board
+		this.initChess();//Initialize chess pieces
+		this.addEvent();//add an event
+		this.sendMessage();//send and receive data
 	}
 
-	// 初始化棋盘--定义
+	
 	initChessBoard () {
 		this.drawRowLine();
 		this.drawColLine();
 		this.chessBoard.clearRect(this.grid + 1, this.grid * 5 + 1, this.grid * 8 - 2, this.grid - 2);
 	}
 
-	// 绘制棋盘线
+	// draw chess board Lines
 	drawLine (x0, y0, x1, y1, lw) {
 		x0 = x0 * this.grid;
 		y0 = y0 * this.grid;
@@ -43,21 +43,21 @@ class ChinaChess {
 		this.chessBoard.closePath();
 	}
 
-	// 绘制棋盘竖线--定义
+	// draw vertical Lines
 	drawRowLine () {
 		for(let i = 1; i <= 10; i++) {
 			this.drawLine(1, i, 9, i);
 		}
 	}
 
-	// 绘制棋盘横线
+	// draw horizontal Lines
 	drawColLine () {
 		for(let i = 1; i <= 9; i++) {
 			this.drawLine(i, 1, i, 10);
 		}
 	}
 
-	// 绘制棋子并初始化
+	// initialize chess pieces
 	initChess () {
 		let Car_b1 = {
 			x: 1,
@@ -228,7 +228,7 @@ class ChinaChess {
 		this.drawChess('#000','#f00');
 	}
 
-	// 绘制棋子
+	// draw chess pieces
 	drawChess (color1, color2) {
 		$.each(this.cheer_arr_B, (i, e) => {
 			e.color = color1;
@@ -249,7 +249,7 @@ class ChinaChess {
 		this.cheer_arr_ALL = this.cheer_arr_B.concat(this.cheer_arr_R);
 	}
 
-	//绘制棋子外框
+	//chess pieces outer frame
 	drawPiece (e) {
 		this.chessBoard.beginPath();
 		this.chessBoard.fillStyle = e.bgcolor;
@@ -261,7 +261,7 @@ class ChinaChess {
 		this.chessBoard.stroke();
 	}
 
-	// 绘制棋子文案
+	//chess pieces logo
 	drawChessText (e) {
 		this.chessBoard.font = "bold 20px Courier New";
 		this.chessBoard.fillStyle = e.color;
@@ -269,7 +269,7 @@ class ChinaChess {
 		this.chessBoard.fillText(e.text, e.x * this.grid - offset, e.y * this.grid + 6);
 	}
 
-	// 监听鼠标点击事件
+	// mouse click
 	addEvent () {
 		this.checked = false;
 		$("canvas").mousedown( ev => {
@@ -277,19 +277,19 @@ class ChinaChess {
 			let redUser = $(".redTeam").html();
 			let blackUser = $(".blackTeam").html();
 			if (redUser == '' || blackUser == '') {
-				tipMsg("请等待玩家进入游戏")//玩家人数不足
+				tipMsg("Please wait for the player to enter the game")//Insufficient players
 			} else {
 				let canMove = false;
 				if (currentUser == redUser || currentUser == blackUser ) {
-					//判断当前可否移动棋子
+					//Judge whether the chess pieces can be moved at present
 					if ((currentUser == redUser && this.#sendData.currentColor) || (currentUser == blackUser && !this.#sendData.currentColor))
 						canMove=true;
 				}
 				else {
-					tipMsg("您没有权限移动棋子，您可以选择观战或者新开一局游戏。");//游客观战
+					tipMsg("You do not have permission to move chess pieces. You can choose to watch the game or open a new game.");//Tourists Model
 					return;
 				}
-				//可移动执行操作
+				//Movable execution operation
 				if (canMove) {
 					for(let j = 1; j <= 10; j++){
 						for(let i = 1; i <= 9; i++) {
@@ -314,11 +314,11 @@ class ChinaChess {
 											this.checked = true;
 										}
 										else if(this.preChess.x == ee.x && this.preChess.y == ee.y) {
-											//      console.log("点在原棋子上");
+											//      console.log("click on the chess pieces");
 											this.updateChess();
 											this.checked = false;
 										} else if(this.preChess.type == ee.type) {
-											//      console.log("切换棋子");
+											//      console.log("switch");
 											this.updateChess();
 											this.preChess = ee;
 											this.initAllChessColor(this.cheer_arr_ALL);
@@ -328,7 +328,7 @@ class ChinaChess {
 											this.drawCurrentChess();
 										}
 										else {
-											// 是否能吃子
+											// judge whether eat or not
 											if(this.eat_rule(i, j)) {
 												this.eat(ii, ee, i, j);
 											}  
@@ -348,10 +348,10 @@ class ChinaChess {
 				}else{
 					switch(this.#sendData.currentColor){
 						case true:
-							tipMsg("请等待红方下棋");
+							tipMsg("Please wait for the red side to play chess");
 							break;
 						case false:
-							tipMsg("请等待黑方下棋");
+							tipMsg("Please wait for the black side to play chess");
 							break;
 					}
 				}
@@ -359,7 +359,7 @@ class ChinaChess {
 		});
 	}
 
-	// 初始化棋子颜色
+	// Initialize chess pieces color
 	initAllChessColor (arr) {
 		this.chessBoard.clearRect(0, 0, canvas.width, canvas.height);
 		this.initChessBoard();
@@ -370,7 +370,7 @@ class ChinaChess {
 		})
 	}
 
-	//当前选中边框
+	//selected border
 	drawCurrentChess () {
 		this.chessBoard.beginPath();
 		this.chessBoard.strokeStyle = this.preChess.bgColor_b;
@@ -379,19 +379,19 @@ class ChinaChess {
 		let top=this.preChess.y*this.grid-this.grid/2;
 		let right=this.preChess.x*this.grid+this.grid/2;
 		let bottom=this.preChess.y*this.grid+this.grid/2;
-		//左上
+		//Upper left
 		this.chessBoard.moveTo(left, top+7);
 		this.chessBoard.lineTo(left, top);
 		this.chessBoard.lineTo(left+7, top);
-		//右上
+		//Upper right
 		this.chessBoard.moveTo(right, top+7);
 		this.chessBoard.lineTo(right, top);
 		this.chessBoard.lineTo(right-7, top);
-		//左下
+		//Lower left
 		this.chessBoard.moveTo(left, bottom-7);
 		this.chessBoard.lineTo(left, bottom);
 		this.chessBoard.lineTo(left+7, bottom);
-		//右下
+		//Lower right
 		this.chessBoard.moveTo(right, bottom-7);
 		this.chessBoard.lineTo(right, bottom);
 		this.chessBoard.lineTo(right-7, bottom);
@@ -400,7 +400,7 @@ class ChinaChess {
 		this.chessBoard.closePath();
 	}
 
-	// 吃子规则、移动规则
+	// rules
 	eat_rule (i, j, type = 'eat') {
 		switch(this.preChess.text) {
 			case "車":
@@ -431,7 +431,7 @@ class ChinaChess {
 		}
 	}
 
-	// 吃子
+	// eat
 	eat (ii, ee, i, j) {
 		this.cheer_arr_ALL.splice(ii, 1);
 		this.move(i, j);
@@ -440,12 +440,12 @@ class ChinaChess {
 		};
 	}
 
-	// 车的规则
+	// the rules of 车
 	rule_car (i, j) {
 		if(this.preChess.x == i || this.preChess.y == j) {
 			if(this.preChess.x == i) {
 				if(this.preChess.y < j) {
-					//    console.log("下");
+					//    console.log("Down");
 					let hasObstacle = false;
 					for(let p = this.preChess.y + 1; p < j; p++) {
 						if(this.isObstacle(i, p)) {
@@ -458,7 +458,7 @@ class ChinaChess {
 					}
 				}
 				if(this.preChess.y > j) {
-					//    console.log("上");
+					//    console.log("Up");
 					let hasObstacle = false;
 					for(let p = this.preChess.y - 1; p > j; p--) {
 						if(this.isObstacle(i, p)) {
@@ -473,7 +473,7 @@ class ChinaChess {
 			}
 			if(this.preChess.y == j) {
 				if(this.preChess.x < i) {
-					//    console.log("右");
+					//    console.log("Right");
 					let hasObstacle = false;
 					for(let p = this.preChess.x + 1; p < i; p++) {
 						if(this.isObstacle(p, j)) {
@@ -486,7 +486,7 @@ class ChinaChess {
 					}
 				}
 				if(this.preChess.x > i) {
-					//    console.log("左");
+					//    console.log("Left");
 					let hasObstacle = false;
 					for(let p = this.preChess.x - 1; p > i; p--) {
 						if(this.isObstacle(p, j)) {
@@ -504,7 +504,7 @@ class ChinaChess {
 		return false;
 	}
 
-	//马的规则
+	//the rules of 马
 	rule_horse (i, j) {
 		let hasObstacle = false;
 		if((Math.abs(this.preChess.x - i) == 1 && Math.abs(this.preChess.y - j) == 2) ||
@@ -514,7 +514,7 @@ class ChinaChess {
 		return false;
 	}
 
-	//红相的规则
+	//the rules of 相
 	rule_elephant_r (i, j) {
 	   let hasObstacle = false;
 		if((Math.abs(this.preChess.x - i) == 2 && Math.abs(this.preChess.y - j) == 2) && j >= 6) {
@@ -535,7 +535,7 @@ class ChinaChess {
 		return false;
 	}
 
-	// 黑象的规则
+	// the rules of 象
 	rule_elephant_b (i, j) {
 		let hasObstacle = false;
 		if((Math.abs(this.preChess.x - i) == 2 && Math.abs(this.preChess.y - j) == 2) && j < 6) {
@@ -556,7 +556,7 @@ class ChinaChess {
 		return false;
 	}
 
-	//红仕的规则
+	//the rules of 仕
 	rule_scholar_r (i, j) {
 		if(this.preChess.x == 5 && this.preChess.y == 9) {
 			if(Math.abs(this.preChess.x - i) == 1 && Math.abs(this.preChess.y - j) == 1) {
@@ -568,7 +568,7 @@ class ChinaChess {
 		return false;
 	}
 
-	//黑士的规则
+	//the rules of 士
 	rule_scholar_b (i, j) {
 		if(this.preChess.x == 5 && this.preChess.y == 2) {
 			if(Math.abs(this.preChess.x - i) == 1 && Math.abs(this.preChess.y - j) == 1) {
@@ -580,7 +580,7 @@ class ChinaChess {
 		return false;
 	}
 
-	//帅的规则
+	//the rules of 帅
 	rule_king_r (i, j) {
 		if((Math.abs(this.preChess.x - i) == 1 && this.preChess.y == j) ||
 			(this.preChess.x == i && Math.abs(this.preChess.y - j) == 1)) {
@@ -593,7 +593,7 @@ class ChinaChess {
 		return false;
 	}
 
-	//将的规则
+	//the rules of 将
 	rule_king_b (i, j) {
 		if((Math.abs(this.preChess.x - i) == 1 && this.preChess.y == j) ||
 			(this.preChess.x == i && Math.abs(this.preChess.y - j) == 1)) {
@@ -606,7 +606,7 @@ class ChinaChess {
 		return false;
 	}
 
-	//兵的规则
+	//the rules of 兵
 	rule_soldier_r (i, j) {
 	   if(this.preChess.y <= 5) {
 			if((this.preChess.x == i && this.preChess.y - 1 == j) || (this.preChess.x - 1 == i && this.preChess.y == j) || (this.preChess.x + 1 == i && this.preChess.y == j)) {
@@ -620,7 +620,7 @@ class ChinaChess {
 		return false;
 	}
 
-	//卒的规则
+	//the rules of 卒
 	rule_soldier_b (i, j) {
 		if(this.preChess.y > 5) {
 			if((this.preChess.x == i && this.preChess.y + 1 == j) || (this.preChess.x - 1 == i && this.preChess.y == j) || (this.preChess.x + 1 == i && this.preChess.y == j)) {
@@ -634,7 +634,7 @@ class ChinaChess {
 		return false;
 	}
 
-	//炮的规则
+	//the rules of 炮
 	rule_cannon (i, j) {
 		if(this.preChess.x == i || this.preChess.y == j) {
 			let t = 0;
@@ -689,7 +689,7 @@ class ChinaChess {
 		return 2;
 	}
 
-	//判断障碍物
+	
 	isObstacle (x, y) {
 		let hasObstacle = false;
 		$.each(this.cheer_arr_ALL, (ii, ee) => {
@@ -701,7 +701,7 @@ class ChinaChess {
 		return hasObstacle;
 	}
 
-	//棋子移动
+	//move chess pieces 
 	move (i, j) {
 		let currentUser = $("#username").html();
 		let redUser = $(".redTeam").html();
@@ -721,16 +721,15 @@ class ChinaChess {
 			this.#sendData.preChess=this.preChess;
 			this.ws.send(JSON.stringify(this.#sendData));
 		} else {
-			tipMsg("您没有权限移动棋子，您可以选择观战或者新开一局游戏。");
+			tipMsg("You do not have permission to move the pieces, you can choose to watch the game or start a new game.");
 		}
 		// this.updateChess();
 		this.checked = false;
 	}
 
 
-	//发送数据
+	//send data
 	sendMessage () {
-		//打开连接发送数据
 		this.ws.onopen = () => {
 			let object = {
 				currentUser: $("#username").html(),
@@ -739,17 +738,17 @@ class ChinaChess {
 			this.ws.send(JSON.stringify(object));
 		}
 
-		// 设置颜色
+		// set color
 		const setColor = type => {
 			this.#curActive = type;
 			$(".currentTeam span").html(type == 'red' ? '红' : '黑');
 			$(".currentTeam span").css("color", type);
 		}
 
-		// 设置初始用户信息
+		// set initial user info
 		const setInitInfo = _ => {
 			let arr = this.#sendData.userList;
-			const setUserInfo = (type, item) => {  // 设置初始用户信息
+			const setUserInfo = (type, item) => {  
 				$(type == 'red' ? '.redTeam' : '.blackTeam').html(item.currentUser);
 				if (item.currentUser == $("#username").html()) {
 					if(type=='red'){
@@ -763,7 +762,7 @@ class ChinaChess {
 			arr.forEach(item => setUserInfo(item.isRed, item))
 		}
 
-		//更新下棋信息
+		//update user info
 		const updateChessInfo = _ => {
 			this.cheer_arr_ALL = this.#sendData.cheer_arr_ALL;
 			this.#sendData.cheer_arr_ALL = this.cheer_arr_ALL;
@@ -776,7 +775,7 @@ class ChinaChess {
 			}
 		}
 
-		//接收信息
+		//receive data
 		this.ws.onmessage = (msg) => {
 			this.#sendData = JSON.parse(msg.data);
 			this.#sendData.currentColor ? setColor('red') : setColor('black')
@@ -790,7 +789,7 @@ class ChinaChess {
 	}
 
 
-	//棋子更新
+	
 	updateChess () {
 		this.chessBoard.clearRect(0, 0, canvas.width, canvas.height);
 		this.initChessBoard();
@@ -804,7 +803,7 @@ class ChinaChess {
 		this.drawCurrentChess();
 	}
 
-	//游戏结束
+	
 	gameOver () {
 		this.chessBoard.clearRect(0, 0, canvas.width, canvas.height);
 		this.cheer_arr_ALL = new Array();
@@ -817,7 +816,7 @@ class ChinaChess {
 		this.updateChess();
 	}
 
-	// 是否结束
+	
 	isOver (ee) {
 		const winOperate = type => {
 			this.#sendData.win = $(type == 'red' ? '.redTeam' : '.blackTeam').html();
@@ -830,7 +829,7 @@ class ChinaChess {
 				? winOperate('black') : false
 	}
 
-	//排行榜设置
+
 	setRank (user_data) {
 		if (!user_data || user_data.length == 0)
 			return;

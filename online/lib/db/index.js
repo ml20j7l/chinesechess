@@ -1,18 +1,18 @@
 /**
- * @infor 数据库查询文件
+ * @infor Database
  * @path  ./lib/db/index.js
  * 
  */
 
-// 连接数据库
+// Connect
 const connectMysql = require('./connection');
 const connection = connectMysql.connection('localhost', 'root', 'Ljd960513', 'test');
 connection.connect();
 
 /**
- * 查询用户
- * @param  {string}   sql      查询sql语句
- * @param  {Function} callback 回调方法
+ * query userinfo
+ * @param  {string}   sql      
+ * @param  {Function} callback 
  * @return void
  */
  const selectHandle = (sql,callback) => {
@@ -26,10 +26,10 @@ connection.connect();
  }
 
 /**
- * 插入用户
- * @param  {string}   addSql       插入sql语句
- * @param  {Array}   addSqlParams  传入参数数组
- * @param  {Function} callback     回调方法
+ * insert new userinfo
+ * @param  {string}   addSql       
+ * @param  {Array}   addSqlParams  
+ * @param  {Function} callback     
  * @return void
  */
  const insertHandle = (addSql, addSqlParams, callback) => {
@@ -43,10 +43,10 @@ connection.connect();
  }
 
 /**
- * 更新用户
- * @param  {string}   updateSql       更新sql语句
- * @param  {Array}   updateParams  传入参数数组
- * @param  {Function} callback     回调方法
+ * update userinfo
+ * @param  {string}   updateSql       
+ * @param  {Array}   updateParams  
+ * @param  {Function} callback     
  * @return void
  */
  const updateHandle = (updateSql, updateParams, callback) => {

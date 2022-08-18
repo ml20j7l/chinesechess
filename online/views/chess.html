@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html>
-	<head><!-- 头文件 -->
+	<head>
 		<meta charset="UTF-8">
 	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title> 中国象棋游戏-对战模式 </title>
+		<title> ChinseseChess-online </title>
 		<link rel="stylesheet" type="text/css" href="./css/weui.min.css">
 		<link rel="stylesheet" type="text/css" href="./css/chess.css">
 	</head>
 	
-	<body class="container2">   <!-- 背景图片在chess.css里面筛选 -->
-		<h1 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Welcome to room</h1>  <!-- 空格/标题 -->
+	<body class="container2">   <!-- background in chess.css  -->
+		<h1 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Welcome to room</h1>  <!-- blank -->
 		<div id = "canvasWrap">
 			<div id = "curActive"></div>
 			<canvas id = "canvas" width="300" height="320">
@@ -18,22 +18,22 @@
 	    <div class="js_dialog" id="iosDialog" style="display: none;">
 	        <div class="weui-mask"></div>
 	        <div class="weui-dialog">
-	            <div class="weui-dialog__bd">提交成功</div>
+	            <div class="weui-dialog__bd">success</div>
 	            <div class="weui-dialog__ft">
-	                <a href="javascript:;" class="weui-dialog__btn weui-dialog__btn_primary" id="know1">知道了</a>
+	                <a href="javascript:;" class="weui-dialog__btn weui-dialog__btn_primary" id="know1">knows</a>
 	            </div>
 	        </div>
 	    </div>
 		<div class="container">
 			<div class="userPanel">
-				<span>游客：</span>
+				<span>tourist watch：</span>
 				<span id="username"></span>
 			</div>
 			<div class="battleInfo">
 				<span class="redTeam"></span><i>vs</i><span class="blackTeam"></span>
 			</div>
 			<div class="currentTeam">
-				<span>红</span>方思考中<i>..</i>
+				<span>RED</span>is thinking<i>..</i>
 			</div>
 			<table border="1" cellspacing="0" id="user_data">
 			</table>

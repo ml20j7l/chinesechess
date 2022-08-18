@@ -1,5 +1,5 @@
 /**
- * @infor 数据库连接文件
+ * @infor Databse
  * @path  ./lib/db/connection.js
  * 
  */

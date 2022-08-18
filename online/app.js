@@ -1,27 +1,27 @@
 /**
- * @infor 象棋后端主文件入口
+ * @infor background page entry
  * @path  ./js/index.js
  * 
  */
 
 const { initApp } = require('./controller')
-initApp();//初始化应用、路由
+initApp();//Initialize application&route
 
-// 导入数据库查询方法
+// import database function
 const { selectHandle, insertHandle, updateHandle } = require('./lib/db')
 
 const { initEventHandle } = require('./controller/socketController')
 
-let cons = [];//连接存放数组
-let data = {};//存储初始化数据
-let isConnect = false;//是否初次连接
+let cons = [];//connect storage array
+let data = {};//store initialization data
+let isConnect = false;//whether connect firstly or not
 let userList = [];
-let CURRENT_COLOR = true;//初始化下棋方，true为红方
+let CURRENT_COLOR = true;//Initialize the chess player, the default is the RED
 
 /**
- * 连接操作方法
- * @param  {Object} ws   websocket实例
- * @param  {Number} port 端口号
+ * connect websocket
+ * @param  {Object} ws   
+ * @param  {Number} port 
  * @return void
  */
 const connectionHandle = (ws, port) => {
@@ -29,13 +29,13 @@ const connectionHandle = (ws, port) => {
 		socket: ws,
 		port: port
 	});
-	console.log("连接数:" + cons.length);
+	console.log("con num:" + cons.length);
 	isConnect && ws.send(JSON.stringify(data));
 }
 
 /**
- * 接收信息方法
- * @param  {string} message 消息json字符串
+ * receive data
+ * @param  {string} message json
  * @return void
  */
 const messageHandle = message => {
@@ -43,22 +43,22 @@ const messageHandle = message => {
 	data = JSON.parse(message);
 	data.type  == 'open' && (cons[cons.length - 1].username = data.currentUser);
 
-	// 更新winner数据
+	// update winner info
 	const updateWinnerNum = _ => {
 		let updateSql = 'UPDATE user_data SET num = num + 1 WHERE username = ?';
 		let updateParams = [data.win];
 		updateHandle(updateSql, updateParams);
 	}
 
-	// 插入用户数据
+	// insert user info
 	const insertUserData = _ => {
-		//设置用户表
+		//set user info
 		setUserInfo(userList, data.currentUser);
 		data.isInit = true;
 
-		//添加新用户，默认赢的次数为0
+		//add a new user，score default 0
 		const insertUserInfoData = index => {
-			let sql = `select * from user_data where username = '${userList[index].currentUser}'`;//查询语句必须带引号
+			let sql = `select * from user_data where username = '${userList[index].currentUser}'`;//quota
 			selectHandle(sql, result => {
 				const insertUserAndSendInfo = _ => {
 					let addSql = 'INSERT INTO user_data(username,num) VALUES(?,?)';
@@ -68,7 +68,7 @@ const messageHandle = message => {
 					});
 				}
 
-				// 表里没有该用户的话，插入新用户
+				// if there is no the user info，insert a new user info
 				result.length == 0 && insertUserAndSendInfo()
 			});
 		}
@@ -76,16 +76,16 @@ const messageHandle = message => {
 		userList.forEach((item, index) => insertUserInfoData(index))
 	}
 
-	data.win && updateWinnerNum() // 用户胜利，更新winner数据
-	!data.currentUser ? (data.isInit = false) : insertUserData() //当前用户是否存在，存在查询更新数据
-	sendAllUserInfo(data);//查询所有用户信息
+	data.win && updateWinnerNum() // win and score+1
+	!data.currentUser ? (data.isInit = false) : insertUserData() 
+	sendAllUserInfo(data);//select all user info
 }
 
 /**
  * 关闭连接方法
- * @param  {Number} code   错误码
- * @param  {Object} reason 错误原因
- * @param  {Object} ws     websocket实例
+ * @param  {Number} code   
+ * @param  {Object} reason 
+ * @param  {Object} ws     
  * @return void
  */
 const closeHandle = (code, reason, ws) => {
@@ -103,18 +103,17 @@ const closeHandle = (code, reason, ws) => {
 	})
 
 	cons.splice(popNum, 1)
-	console.log("已断开webSocket连接,code:" + code + ",reason:" + reason);
-	console.log(`当前连接数:${cons.length}`)
+	console.log("webSocket connection loses,code:" + code + ",reason:" + reason);
+	console.log(`con num:${cons.length}`)
 }
 
 /**
- * 错误监听方法
- * @param  {Object} e 异常对象
+ * listening error
+ * @param  {Object} e 
  * @return void
  */
 const errorHandle = e => console.error(e)
 
-// 初始化事件方法
 initEventHandle({
 	connection: connectionHandle,
 	message: messageHandle,
@@ -123,18 +122,18 @@ initEventHandle({
 })
 
 /**
- * 发送所有用户数据，同步更新给所有用户数据
+ * send all user data and update all user data synchronously
  * @return void
  */
 function sendAllUserInfo(){
 	data.userList = userList;
 
-	// 移动操作，切换持方
+	// move and switch side
 	if (data.type == 'move')
 		CURRENT_COLOR = !CURRENT_COLOR;
 	data.currentColor = CURRENT_COLOR;
 
-	// 查询数据库
+	// query database
 	let sqlSelectAll = 'select * from user_data';
 	selectHandle(sqlSelectAll, (result) => {
 		result && (data.user_data = result);
@@ -143,16 +142,16 @@ function sendAllUserInfo(){
 }
 
 /**
- * 设置用户信息
- * @param {Array} arr  用户信息数组
- * @param {String} user 用户名
+ * set user info
+ * @param {Array} arr  
+ * @param {String} user 
  */
 function setUserInfo(arr, user){
 	if (arr.length >= 2 || (arr.length == 1 && arr[0].currentUser == user)) {
 		return
 	}
 
-	// 设置红方、黑方信息
+	// set RED & BLACK info 
 	let isRed = false;
 	arr.forEach(item => (item.isRed === 'red' && (isRed = true)))
 	arr.push({
