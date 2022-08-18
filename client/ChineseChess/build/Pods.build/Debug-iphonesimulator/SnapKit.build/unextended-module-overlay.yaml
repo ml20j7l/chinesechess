@@ -1,0 +1,14 @@
+{
+  'version': 0,
+  'use-external-names': 'false',
+  'case-sensitive': 'false',
+  'roots': [{
+    'type': 'directory',
+    'name': "/Users/caitiance/Downloads/ChineseChess-master-5/ChineseChess/build/Debug-iphonesimulator/SnapKit/SnapKit.framework/Modules"
+    'contents': [{
+      'type': 'file',
+      'name': "module.modulemap",
+      'external-contents': "/Users/caitiance/Downloads/ChineseChess-master-5/ChineseChess/build/Pods.build/Debug-iphonesimulator/SnapKit.build/unextended-module.modulemap",
+    }]
+  }]
+}

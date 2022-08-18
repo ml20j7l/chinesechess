@@ -1,0 +1,1153 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7C535405287C1ACE0016B25B /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C76A075287B46020039A470 /* SnapKit.framework */; };
+		7C53540C287C1B540016B25B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C535409287C1B530016B25B /* SceneDelegate.swift */; };
+		7C53540E287C1B5B0016B25B /* bgMusic.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7C53540D287C1B5B0016B25B /* bgMusic.mp3 */; };
+		7C535410287C1B630016B25B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C53540F287C1B630016B25B /* ViewController.swift */; };
+		7C535412287C1B6C0016B25B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C535411287C1B6C0016B25B /* Main.storyboard */; };
+		7C53541A287C1B9C0016B25B /* MyChessBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C535415287C1B9C0016B25B /* MyChessBoard.swift */; };
+		7C53541B287C1B9C0016B25B /* MyGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C535416287C1B9C0016B25B /* MyGameViewController.swift */; };
+		7C53541C287C1B9C0016B25B /* MyMusicPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C535417287C1B9C0016B25B /* MyMusicPlayer.swift */; };
+		7C53541D287C1B9C0016B25B /* MyChessItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C535418287C1B9C0016B25B /* MyChessItem.swift */; };
+		7C53541E287C1B9C0016B25B /* MyChessTip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C535419287C1B9C0016B25B /* MyChessTip.swift */; };
+		7C90C43E28A2BC36008D9805 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C90C43D28A2BC36008D9805 /* Storyboard.storyboard */; };
+		7CF25B76287DD63A00F515F7 /* ChessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CF25B4D287DD63A00F515F7 /* ChessViewController.swift */; };
+		7CF25B77287DD63A00F515F7 /* cursor.png in Resources */ = {isa = PBXBuildFile; fileRef = 7CF25B4F287DD63A00F515F7 /* cursor.png */; };
+		7CF25B78287DD63A00F515F7 /* red-guard.png in Resources */ = {isa = PBXBuildFile; fileRef = 7CF25B50287DD63A00F515F7 /* red-guard.png */; };
+		7CF25B79287DD63A00F515F7 /* black-pawn.png in Resources */ = {isa = PBXBuildFile; fileRef = 7CF25B51287DD63A00F515F7 /* black-pawn.png */; };
+		7CF25B7A287DD63A00F515F7 /* red-pawn.png in Resources */ = {isa = PBXBuildFile; fileRef = 7CF25B52287DD63A00F515F7 /* red-pawn.png */; };
+		7CF25B7B287DD63A00F515F7 /* red-horse.png in Resources */ = {isa = PBXBuildFile; fileRef = 7CF25B53287DD63A00F515F7 /* red-horse.png */; };
+		7CF25B7C287DD63A00F515F7 /* red-king.png in Resources */ = {isa = PBXBuildFile; fileRef = 7CF25B54287DD63A00F515F7 /* red-king.png */; };
+		7CF25B7D287DD63A00F515F7 /* black-king.png in Resources */ = {isa = PBXBuildFile; fileRef = 7CF25B55287DD63A00F515F7 /* black-king.png */; };
+		7CF25B7E287DD63A00F515F7 /* red-cannon.png in Resources */ = {isa = PBXBuildFile; fileRef = 7CF25B56287DD63A00F515F7 /* red-cannon.png */; };
+		7CF25B7F287DD63A00F515F7 /* black-guard.png in Resources */ = {isa = PBXBuildFile; fileRef = 7CF25B57287DD63A00F515F7 /* black-guard.png */; };
+		7CF25B80287DD63A00F515F7 /* red-bishop.png in Resources */ = {isa = PBXBuildFile; fileRef = 7CF25B58287DD63A00F515F7 /* red-bishop.png */; };
+		7CF25B81287DD63A00F515F7 /* black-cannon.png in Resources */ = {isa = PBXBuildFile; fileRef = 7CF25B59287DD63A00F515F7 /* black-cannon.png */; };
+		7CF25B82287DD63A00F515F7 /* black-horse.png in Resources */ = {isa = PBXBuildFile; fileRef = 7CF25B5A287DD63A00F515F7 /* black-horse.png */; };
+		7CF25B83287DD63A00F515F7 /* black-rook.png in Resources */ = {isa = PBXBuildFile; fileRef = 7CF25B5B287DD63A00F515F7 /* black-rook.png */; };
+		7CF25B84287DD63A00F515F7 /* red-rook.png in Resources */ = {isa = PBXBuildFile; fileRef = 7CF25B5C287DD63A00F515F7 /* red-rook.png */; };
+		7CF25B85287DD63A00F515F7 /* black-bishop.png in Resources */ = {isa = PBXBuildFile; fileRef = 7CF25B5D287DD63A00F515F7 /* black-bishop.png */; };
+		7CF25B86287DD63A00F515F7 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CF25B5F287DD63A00F515F7 /* Utilities.swift */; };
+		7CF25B87287DD63A00F515F7 /* Board.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CF25B60287DD63A00F515F7 /* Board.swift */; };
+		7CF25B88287DD63A00F515F7 /* Piece.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CF25B61287DD63A00F515F7 /* Piece.swift */; };
+		7CF25B89287DD63A00F515F7 /* Pawn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CF25B63287DD63A00F515F7 /* Pawn.swift */; };
+		7CF25B8A287DD63A00F515F7 /* Guard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CF25B64287DD63A00F515F7 /* Guard.swift */; };
+		7CF25B8B287DD63A00F515F7 /* Horse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CF25B65287DD63A00F515F7 /* Horse.swift */; };
+		7CF25B8C287DD63A00F515F7 /* Bishop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CF25B66287DD63A00F515F7 /* Bishop.swift */; };
+		7CF25B8D287DD63A00F515F7 /* Cannon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CF25B67287DD63A00F515F7 /* Cannon.swift */; };
+		7CF25B8E287DD63A00F515F7 /* Rook.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CF25B68287DD63A00F515F7 /* Rook.swift */; };
+		7CF25B8F287DD63A00F515F7 /* King.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CF25B69287DD63A00F515F7 /* King.swift */; };
+		7CF25B90287DD63A00F515F7 /* ChessBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CF25B6A287DD63A00F515F7 /* ChessBrain.swift */; };
+		7CF25B91287DD63A00F515F7 /* BoardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CF25B6C287DD63A00F515F7 /* BoardView.swift */; };
+		7CF25B92287DD63A00F515F7 /* ChessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CF25B6D287DD63A00F515F7 /* ChessView.swift */; };
+		7CF25B93287DD63A00F515F7 /* PieceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CF25B6E287DD63A00F515F7 /* PieceView.swift */; };
+		8596C0282154D71500F85077 /* Vault.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8596C0272154D71500F85077 /* Vault.txt */; };
+		A70765F21F94E1A200FA6A43 /* GameVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A70765F11F94E1A200FA6A43 /* GameVC.swift */; };
+		A70765F61F94E1E600FA6A43 /* ChessVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A70765F51F94E1E600FA6A43 /* ChessVC.swift */; };
+		A708989D201322A6009CAF5F /* HistoryMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A708989C201322A6009CAF5F /* HistoryMenuView.swift */; };
+		A71C6A5A1FF0E68100D9F0F6 /* AppInformation.txt in Resources */ = {isa = PBXBuildFile; fileRef = A71C6A591FF0E68100D9F0F6 /* AppInformation.txt */; };
+		A71D3D7B1F9F30D500823384 /* ChessBoardController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71D3D7A1F9F30D500823384 /* ChessBoardController.swift */; };
+		A71E36361F90ECFA00D9BB62 /* UserPreference.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71E36351F90ECFA00D9BB62 /* UserPreference.swift */; };
+		A71E36381F90EEC900D9BB62 /* ResourcesProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71E36371F90EEC900D9BB62 /* ResourcesProvider.swift */; };
+		A71E363A1F90EEE200D9BB62 /* UIColor+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71E36391F90EEE200D9BB62 /* UIColor+Hex.swift */; };
+		A723A7A41FFB6CEA00F780AF /* CharacterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A723A7A31FFB6CEA00F780AF /* CharacterView.swift */; };
+		A72534D11FE39EF900C2AFAA /* NSObject+Class.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72534D01FE39EF900C2AFAA /* NSObject+Class.swift */; };
+		A72A4D651F90A2A800CBDAD9 /* UIViewController+PresentVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72A4D641F90A2A800CBDAD9 /* UIViewController+PresentVC.swift */; };
+		A72A4D691F90A6E000CBDAD9 /* Macro.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72A4D681F90A6E000CBDAD9 /* Macro.swift */; };
+		A72D652E1FF13B8700E44E60 /* GameSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72D652D1FF13B8700E44E60 /* GameSettingsView.swift */; };
+		A72F94191F974E73001FACC3 /* UIView+Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72F94181F974E73001FACC3 /* UIView+Layout.swift */; };
+		A72F941B1F9753EE001FACC3 /* UIView+Tap.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72F941A1F9753EE001FACC3 /* UIView+Tap.swift */; };
+		A73873D21FE649A500D24753 /* BladeAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A73873D11FE649A500D24753 /* BladeAlertView.swift */; };
+		A73873D61FE6557300D24753 /* Value+Meta.swift in Sources */ = {isa = PBXBuildFile; fileRef = A73873D51FE6557300D24753 /* Value+Meta.swift */; };
+		A749D7571FE11BB5005B8520 /* TextAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A749D7561FE11BB5005B8520 /* TextAlertView.swift */; };
+		A74F8AD91FEE370200782288 /* NavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A74F8AD81FEE370200782288 /* NavigationView.swift */; };
+		A7592D7F1F9DFB0C00E7EA0F /* Value+Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7592D7E1F9DFB0C00E7EA0F /* Value+Random.swift */; };
+		A75AB91D206C8C1B00FA7B1F /* Luna.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A75AB8E0206C860800FA7B1F /* Luna.framework */; };
+		A75AB91E206C8C1B00FA7B1F /* Luna.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A75AB8E0206C860800FA7B1F /* Luna.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A7607A721FE3DEDC0030039F /* Objc+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7607A711FE3DEDC0030039F /* Objc+Extension.swift */; };
+		A761CD1B201B09C500EBB102 /* PromptAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A761CD1A201B09C500EBB102 /* PromptAlertView.swift */; };
+		A761CD1D201B09D300EBB102 /* InputAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A761CD1C201B09D300EBB102 /* InputAlertView.swift */; };
+		A770863D1F94C39100C24D2B /* LoadingAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A770863C1F94C39100C24D2B /* LoadingAlertView.swift */; };
+		A77429CB1FF929DE00B7D480 /* GameMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A77429CA1FF929DE00B7D480 /* GameMenuView.swift */; };
+		A77429CD1FF9361E00B7D480 /* UIImage+Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = A77429CC1FF9361E00B7D480 /* UIImage+Color.swift */; };
+		A778E4801F94E25200D28B25 /* HistoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A778E47F1F94E25200D28B25 /* HistoryVC.swift */; };
+		A77D8F172000BDBB000D3588 /* UserFileHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = A77D8F162000BDBB000D3588 /* UserFileHandler.swift */; };
+		A77E187F1F8DE5D0003A2EC5 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A77E187E1F8DE5D0003A2EC5 /* HomeVC.swift */; };
+		A78239D51FFE1B3A0078A906 /* UITableView+Update.swift in Sources */ = {isa = PBXBuildFile; fileRef = A78239D41FFE1B3A0078A906 /* UITableView+Update.swift */; };
+		A7854A1E1FEF5BA100C977B7 /* UIView+Window.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7854A1D1FEF5BA100C977B7 /* UIView+Window.swift */; };
+		A7884A021FC9995C00691385 /* mate.m4a in Resources */ = {isa = PBXBuildFile; fileRef = A7884A011FC9995B00691385 /* mate.m4a */; };
+		A78C6A6B200DABA900A51BC2 /* EditBoardController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A78C6A6A200DABA900A51BC2 /* EditBoardController.swift */; };
+		A78CC1BC1F8F783100563789 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A78CC1BB1F8F783100563789 /* Launch Screen.storyboard */; };
+		A79128671F911F17002CC4E5 /* WavHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79128661F911F17002CC4E5 /* WavHandler.swift */; };
+		A79128681F9124E2002CC4E5 /* 沧海龙吟.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A7E51D161F905DBD0054DF93 /* 沧海龙吟.mp3 */; };
+		A79128691F9124E2002CC4E5 /* check.wav in Resources */ = {isa = PBXBuildFile; fileRef = A7E51D171F905DBD0054DF93 /* check.wav */; };
+		A791286A1F9124E2002CC4E5 /* eat.wav in Resources */ = {isa = PBXBuildFile; fileRef = A7E51D181F905DBD0054DF93 /* eat.wav */; };
+		A791286B1F9124E2002CC4E5 /* run.wav in Resources */ = {isa = PBXBuildFile; fileRef = A7E51D191F905DBD0054DF93 /* run.wav */; };
+		A791286C1F9124E2002CC4E5 /* select.wav in Resources */ = {isa = PBXBuildFile; fileRef = A7E51D1A1F905DBD0054DF93 /* select.wav */; };
+		A791286D1F9124E2002CC4E5 /* KaiTi.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A7E51D141F9058BF0054DF93 /* KaiTi.ttf */; };
+		A7928ADC1FF916F1000DF584 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7928ADB1FF916F1000DF584 /* MenuView.swift */; };
+		A7A19EE62005F09E00F5F9E8 /* EditVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A19EE52005F09E00F5F9E8 /* EditVC.swift */; };
+		A7A19EEC2005F39D00F5F9E8 /* HistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A19EEB2005F39D00F5F9E8 /* HistoryView.swift */; };
+		A7B3FD7F1F9A03A900B379AD /* Array+Split.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7B3FD7E1F9A03A900B379AD /* Array+Split.swift */; };
+		A7B604C51FFB977400B8B5D8 /* Value+Property.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7B604C41FFB977400B8B5D8 /* Value+Property.swift */; };
+		A7C4E5401F9DC20E0018595A /* FlashLayerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C4E53F1F9DC20E0018595A /* FlashLayerController.swift */; };
+		A7C8D4701FE3A4F6006AC172 /* UIView+Border.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C8D46F1FE3A4F6006AC172 /* UIView+Border.swift */; };
+		A7CD69F31F91E11700C3202A /* LayoutPartner.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7CD69F21F91E11700C3202A /* LayoutPartner.swift */; };
+		A7CE55F91F8DC28600641454 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7CE55F81F8DC28600641454 /* AppDelegate.swift */; };
+		A7CE56001F8DC28600641454 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A7CE55FF1F8DC28600641454 /* Assets.xcassets */; };
+		A7D146C81FA48A9100A512FF /* GameBoardController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7D146C71FA48A9100A512FF /* GameBoardController.swift */; };
+		A7D4A47A2017570800E4FCDE /* MultipeerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7D4A4792017570800E4FCDE /* MultipeerManager.swift */; };
+		A7D4A47C20175FAF00E4FCDE /* Dictionary+Json.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7D4A47B20175FAF00E4FCDE /* Dictionary+Json.swift */; };
+		A7DB8F66200DE0490088DB94 /* EditChessesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7DB8F65200DE0490088DB94 /* EditChessesView.swift */; };
+		A7DC614D1F92435C009A9205 /* UIFont+KaiTi.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7DC614C1F92435C009A9205 /* UIFont+KaiTi.swift */; };
+		A7DC614F1F9249B5009A9205 /* UIColor+Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7DC614E1F9249B5009A9205 /* UIColor+Colors.swift */; };
+		A7DFAD7C1F910D7D00FEB8AC /* Value+Map.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7DFAD7B1F910D7D00FEB8AC /* Value+Map.swift */; };
+		A7E7ACFD1F91DE8E00B29C5A /* UIButton+Golden.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7E7ACFC1F91DE8E00B29C5A /* UIButton+Golden.swift */; };
+		A7EB7BBA1FE419F200AA903A /* Value+Mutating.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7EB7BB91FE419F200AA903A /* Value+Mutating.swift */; };
+		A7FD59C02012D859006C18C2 /* HistoryBoardController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7FD59BF2012D859006C18C2 /* HistoryBoardController.swift */; };
+		E88A78AA2306858600D99696 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E88A78A92306858600D99696 /* BaseViewController.swift */; };
+		EDAEBA76287EC4860086151C /* FightViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDAEBA75287EC4860086151C /* FightViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		7C76A074287B46020039A470 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7C76A06F287B46020039A470 /* SnapKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = EEBCC9D819CC627D0083B827;
+			remoteInfo = SnapKit;
+		};
+		7C76A076287B46020039A470 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7C76A06F287B46020039A470 /* SnapKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = EEBCC9E219CC627E0083B827;
+			remoteInfo = "SnapKit Tests";
+		};
+		A75AB8DF206C860800FA7B1F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A75AB8DB206C860800FA7B1F /* Luna.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = A72C22E0206C84BB00520E72;
+			remoteInfo = Luna;
+		};
+		A75AB91F206C8C1B00FA7B1F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A75AB8DB206C860800FA7B1F /* Luna.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = A72C22DF206C84BB00520E72;
+			remoteInfo = Luna;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		A75AB921206C8C1B00FA7B1F /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				A75AB91E206C8C1B00FA7B1F /* Luna.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		0960C69523E81DB1C0565640 /* Pods-ChineseChess.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChineseChess.release.xcconfig"; path = "Pods/Target Support Files/Pods-ChineseChess/Pods-ChineseChess.release.xcconfig"; sourceTree = "<group>"; };
+		2230DA2D05560831F6ABD1E3 /* Pods_ChineseChess.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChineseChess.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7C535409287C1B530016B25B /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		7C53540D287C1B5B0016B25B /* bgMusic.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = bgMusic.mp3; sourceTree = "<group>"; };
+		7C53540F287C1B630016B25B /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		7C535411287C1B6C0016B25B /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		7C535413287C1B8E0016B25B /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7C535415287C1B9C0016B25B /* MyChessBoard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyChessBoard.swift; sourceTree = "<group>"; };
+		7C535416287C1B9C0016B25B /* MyGameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyGameViewController.swift; sourceTree = "<group>"; };
+		7C535417287C1B9C0016B25B /* MyMusicPlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyMusicPlayer.swift; sourceTree = "<group>"; };
+		7C535418287C1B9C0016B25B /* MyChessItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyChessItem.swift; sourceTree = "<group>"; };
+		7C535419287C1B9C0016B25B /* MyChessTip.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyChessTip.swift; sourceTree = "<group>"; };
+		7C76A06F287B46020039A470 /* SnapKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SnapKit.xcodeproj; path = "../../SnapKit-develop/SnapKit.xcodeproj"; sourceTree = "<group>"; };
+		7C90C43D28A2BC36008D9805 /* Storyboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
+		7CF25B4D287DD63A00F515F7 /* ChessViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChessViewController.swift; sourceTree = "<group>"; };
+		7CF25B4F287DD63A00F515F7 /* cursor.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cursor.png; sourceTree = "<group>"; };
+		7CF25B50287DD63A00F515F7 /* red-guard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "red-guard.png"; sourceTree = "<group>"; };
+		7CF25B51287DD63A00F515F7 /* black-pawn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "black-pawn.png"; sourceTree = "<group>"; };
+		7CF25B52287DD63A00F515F7 /* red-pawn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "red-pawn.png"; sourceTree = "<group>"; };
+		7CF25B53287DD63A00F515F7 /* red-horse.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "red-horse.png"; sourceTree = "<group>"; };
+		7CF25B54287DD63A00F515F7 /* red-king.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "red-king.png"; sourceTree = "<group>"; };
+		7CF25B55287DD63A00F515F7 /* black-king.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "black-king.png"; sourceTree = "<group>"; };
+		7CF25B56287DD63A00F515F7 /* red-cannon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "red-cannon.png"; sourceTree = "<group>"; };
+		7CF25B57287DD63A00F515F7 /* black-guard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "black-guard.png"; sourceTree = "<group>"; };
+		7CF25B58287DD63A00F515F7 /* red-bishop.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "red-bishop.png"; sourceTree = "<group>"; };
+		7CF25B59287DD63A00F515F7 /* black-cannon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "black-cannon.png"; sourceTree = "<group>"; };
+		7CF25B5A287DD63A00F515F7 /* black-horse.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "black-horse.png"; sourceTree = "<group>"; };
+		7CF25B5B287DD63A00F515F7 /* black-rook.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "black-rook.png"; sourceTree = "<group>"; };
+		7CF25B5C287DD63A00F515F7 /* red-rook.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "red-rook.png"; sourceTree = "<group>"; };
+		7CF25B5D287DD63A00F515F7 /* black-bishop.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "black-bishop.png"; sourceTree = "<group>"; };
+		7CF25B5F287DD63A00F515F7 /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		7CF25B60287DD63A00F515F7 /* Board.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Board.swift; sourceTree = "<group>"; };
+		7CF25B61287DD63A00F515F7 /* Piece.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Piece.swift; sourceTree = "<group>"; };
+		7CF25B63287DD63A00F515F7 /* Pawn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pawn.swift; sourceTree = "<group>"; };
+		7CF25B64287DD63A00F515F7 /* Guard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Guard.swift; sourceTree = "<group>"; };
+		7CF25B65287DD63A00F515F7 /* Horse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Horse.swift; sourceTree = "<group>"; };
+		7CF25B66287DD63A00F515F7 /* Bishop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bishop.swift; sourceTree = "<group>"; };
+		7CF25B67287DD63A00F515F7 /* Cannon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cannon.swift; sourceTree = "<group>"; };
+		7CF25B68287DD63A00F515F7 /* Rook.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Rook.swift; sourceTree = "<group>"; };
+		7CF25B69287DD63A00F515F7 /* King.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = King.swift; sourceTree = "<group>"; };
+		7CF25B6A287DD63A00F515F7 /* ChessBrain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChessBrain.swift; sourceTree = "<group>"; };
+		7CF25B6C287DD63A00F515F7 /* BoardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoardView.swift; sourceTree = "<group>"; };
+		7CF25B6D287DD63A00F515F7 /* ChessView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChessView.swift; sourceTree = "<group>"; };
+		7CF25B6E287DD63A00F515F7 /* PieceView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PieceView.swift; sourceTree = "<group>"; };
+		8596C0272154D71500F85077 /* Vault.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Vault.txt; sourceTree = "<group>"; };
+		A70765F11F94E1A200FA6A43 /* GameVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameVC.swift; sourceTree = "<group>"; };
+		A70765F51F94E1E600FA6A43 /* ChessVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChessVC.swift; sourceTree = "<group>"; };
+		A708989C201322A6009CAF5F /* HistoryMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryMenuView.swift; sourceTree = "<group>"; };
+		A71C6A591FF0E68100D9F0F6 /* AppInformation.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = AppInformation.txt; sourceTree = "<group>"; };
+		A71D3D7A1F9F30D500823384 /* ChessBoardController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChessBoardController.swift; sourceTree = "<group>"; };
+		A71E36351F90ECFA00D9BB62 /* UserPreference.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPreference.swift; sourceTree = "<group>"; };
+		A71E36371F90EEC900D9BB62 /* ResourcesProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourcesProvider.swift; sourceTree = "<group>"; };
+		A71E36391F90EEE200D9BB62 /* UIColor+Hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Hex.swift"; sourceTree = "<group>"; };
+		A72062111F8DE85300FA764E /* ChineseChess-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ChineseChess-Bridging-Header.h"; sourceTree = "<group>"; };
+		A723A7A31FFB6CEA00F780AF /* CharacterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterView.swift; sourceTree = "<group>"; };
+		A72534D01FE39EF900C2AFAA /* NSObject+Class.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject+Class.swift"; sourceTree = "<group>"; };
+		A72A4D641F90A2A800CBDAD9 /* UIViewController+PresentVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+PresentVC.swift"; sourceTree = "<group>"; };
+		A72A4D681F90A6E000CBDAD9 /* Macro.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Macro.swift; sourceTree = "<group>"; };
+		A72D652D1FF13B8700E44E60 /* GameSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSettingsView.swift; sourceTree = "<group>"; };
+		A72F94181F974E73001FACC3 /* UIView+Layout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Layout.swift"; sourceTree = "<group>"; };
+		A72F941A1F9753EE001FACC3 /* UIView+Tap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Tap.swift"; sourceTree = "<group>"; };
+		A73873D11FE649A500D24753 /* BladeAlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BladeAlertView.swift; sourceTree = "<group>"; };
+		A73873D51FE6557300D24753 /* Value+Meta.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Value+Meta.swift"; sourceTree = "<group>"; };
+		A749D7561FE11BB5005B8520 /* TextAlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextAlertView.swift; sourceTree = "<group>"; };
+		A74F8AD81FEE370200782288 /* NavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationView.swift; sourceTree = "<group>"; };
+		A7592D7E1F9DFB0C00E7EA0F /* Value+Random.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Value+Random.swift"; sourceTree = "<group>"; };
+		A75AB8DB206C860800FA7B1F /* Luna.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Luna.xcodeproj; path = Luna/Luna.xcodeproj; sourceTree = "<group>"; };
+		A7607A711FE3DEDC0030039F /* Objc+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Objc+Extension.swift"; sourceTree = "<group>"; };
+		A761CD1A201B09C500EBB102 /* PromptAlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromptAlertView.swift; sourceTree = "<group>"; };
+		A761CD1C201B09D300EBB102 /* InputAlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputAlertView.swift; sourceTree = "<group>"; };
+		A770863C1F94C39100C24D2B /* LoadingAlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingAlertView.swift; sourceTree = "<group>"; };
+		A77429CA1FF929DE00B7D480 /* GameMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameMenuView.swift; sourceTree = "<group>"; };
+		A77429CC1FF9361E00B7D480 /* UIImage+Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Color.swift"; sourceTree = "<group>"; };
+		A778E47F1F94E25200D28B25 /* HistoryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryVC.swift; sourceTree = "<group>"; };
+		A77D8F162000BDBB000D3588 /* UserFileHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserFileHandler.swift; sourceTree = "<group>"; };
+		A77E187E1F8DE5D0003A2EC5 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
+		A78239D41FFE1B3A0078A906 /* UITableView+Update.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Update.swift"; sourceTree = "<group>"; };
+		A7854A1D1FEF5BA100C977B7 /* UIView+Window.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Window.swift"; sourceTree = "<group>"; };
+		A7884A011FC9995B00691385 /* mate.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = mate.m4a; sourceTree = "<group>"; };
+		A78C6A6A200DABA900A51BC2 /* EditBoardController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditBoardController.swift; sourceTree = "<group>"; };
+		A78CC1BB1F8F783100563789 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		A79128661F911F17002CC4E5 /* WavHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WavHandler.swift; sourceTree = "<group>"; };
+		A7928ADB1FF916F1000DF584 /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
+		A7A19EE52005F09E00F5F9E8 /* EditVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditVC.swift; sourceTree = "<group>"; };
+		A7A19EEB2005F39D00F5F9E8 /* HistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryView.swift; sourceTree = "<group>"; };
+		A7B3FD7E1F9A03A900B379AD /* Array+Split.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Split.swift"; sourceTree = "<group>"; };
+		A7B604C41FFB977400B8B5D8 /* Value+Property.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Value+Property.swift"; sourceTree = "<group>"; };
+		A7C4E53F1F9DC20E0018595A /* FlashLayerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashLayerController.swift; sourceTree = "<group>"; };
+		A7C8D46F1FE3A4F6006AC172 /* UIView+Border.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Border.swift"; sourceTree = "<group>"; };
+		A7CD69F21F91E11700C3202A /* LayoutPartner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutPartner.swift; sourceTree = "<group>"; };
+		A7CE55F51F8DC28600641454 /* ChineseChess.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChineseChess.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A7CE55F81F8DC28600641454 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		A7CE55FF1F8DC28600641454 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A7CE56041F8DC28600641454 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A7D146C71FA48A9100A512FF /* GameBoardController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameBoardController.swift; sourceTree = "<group>"; };
+		A7D4A4792017570800E4FCDE /* MultipeerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultipeerManager.swift; sourceTree = "<group>"; };
+		A7D4A47B20175FAF00E4FCDE /* Dictionary+Json.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dictionary+Json.swift"; sourceTree = "<group>"; };
+		A7DB8F65200DE0490088DB94 /* EditChessesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditChessesView.swift; sourceTree = "<group>"; };
+		A7DC614C1F92435C009A9205 /* UIFont+KaiTi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+KaiTi.swift"; sourceTree = "<group>"; };
+		A7DC614E1F9249B5009A9205 /* UIColor+Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Colors.swift"; sourceTree = "<group>"; };
+		A7DFAD7B1F910D7D00FEB8AC /* Value+Map.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Value+Map.swift"; sourceTree = "<group>"; };
+		A7E51D141F9058BF0054DF93 /* KaiTi.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = KaiTi.ttf; sourceTree = "<group>"; };
+		A7E51D161F905DBD0054DF93 /* 沧海龙吟.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "沧海龙吟.mp3"; sourceTree = "<group>"; };
+		A7E51D171F905DBD0054DF93 /* check.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = check.wav; sourceTree = "<group>"; };
+		A7E51D181F905DBD0054DF93 /* eat.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = eat.wav; sourceTree = "<group>"; };
+		A7E51D191F905DBD0054DF93 /* run.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = run.wav; sourceTree = "<group>"; };
+		A7E51D1A1F905DBD0054DF93 /* select.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = select.wav; sourceTree = "<group>"; };
+		A7E7ACFC1F91DE8E00B29C5A /* UIButton+Golden.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Golden.swift"; sourceTree = "<group>"; };
+		A7EB7BB91FE419F200AA903A /* Value+Mutating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Value+Mutating.swift"; sourceTree = "<group>"; };
+		A7FD59BF2012D859006C18C2 /* HistoryBoardController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryBoardController.swift; sourceTree = "<group>"; };
+		BBACABA43398033918CA7F83 /* Pods-ChineseChess.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChineseChess.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ChineseChess/Pods-ChineseChess.debug.xcconfig"; sourceTree = "<group>"; };
+		E88A78A92306858600D99696 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		EDAEBA75287EC4860086151C /* FightViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FightViewController.swift; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A7CE55F21F8DC28600641454 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7C535405287C1ACE0016B25B /* SnapKit.framework in Frameworks */,
+				A75AB91D206C8C1B00FA7B1F /* Luna.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3B27F5811E81FBD4FD30BE92 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BBACABA43398033918CA7F83 /* Pods-ChineseChess.debug.xcconfig */,
+				0960C69523E81DB1C0565640 /* Pods-ChineseChess.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		47BE21EC891108117BF7D5F1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7C76A06F287B46020039A470 /* SnapKit.xcodeproj */,
+				2230DA2D05560831F6ABD1E3 /* Pods_ChineseChess.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7C76A070287B46020039A470 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7C76A075287B46020039A470 /* SnapKit.framework */,
+				7C76A077287B46020039A470 /* SnapKit Tests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7CF25B4C287DD63A00F515F7 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				7CF25B4D287DD63A00F515F7 /* ChessViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		7CF25B4E287DD63A00F515F7 /* img */ = {
+			isa = PBXGroup;
+			children = (
+				7CF25B4F287DD63A00F515F7 /* cursor.png */,
+				7CF25B50287DD63A00F515F7 /* red-guard.png */,
+				7CF25B51287DD63A00F515F7 /* black-pawn.png */,
+				7CF25B52287DD63A00F515F7 /* red-pawn.png */,
+				7CF25B53287DD63A00F515F7 /* red-horse.png */,
+				7CF25B54287DD63A00F515F7 /* red-king.png */,
+				7CF25B55287DD63A00F515F7 /* black-king.png */,
+				7CF25B56287DD63A00F515F7 /* red-cannon.png */,
+				7CF25B57287DD63A00F515F7 /* black-guard.png */,
+				7CF25B58287DD63A00F515F7 /* red-bishop.png */,
+				7CF25B59287DD63A00F515F7 /* black-cannon.png */,
+				7CF25B5A287DD63A00F515F7 /* black-horse.png */,
+				7CF25B5B287DD63A00F515F7 /* black-rook.png */,
+				7CF25B5C287DD63A00F515F7 /* red-rook.png */,
+				7CF25B5D287DD63A00F515F7 /* black-bishop.png */,
+			);
+			path = img;
+			sourceTree = "<group>";
+		};
+		7CF25B5E287DD63A00F515F7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				7CF25B5F287DD63A00F515F7 /* Utilities.swift */,
+				7CF25B60287DD63A00F515F7 /* Board.swift */,
+				7CF25B61287DD63A00F515F7 /* Piece.swift */,
+				7CF25B62287DD63A00F515F7 /* Pieces */,
+				7CF25B6A287DD63A00F515F7 /* ChessBrain.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		7CF25B62287DD63A00F515F7 /* Pieces */ = {
+			isa = PBXGroup;
+			children = (
+				7CF25B63287DD63A00F515F7 /* Pawn.swift */,
+				7CF25B64287DD63A00F515F7 /* Guard.swift */,
+				7CF25B65287DD63A00F515F7 /* Horse.swift */,
+				7CF25B66287DD63A00F515F7 /* Bishop.swift */,
+				7CF25B67287DD63A00F515F7 /* Cannon.swift */,
+				7CF25B68287DD63A00F515F7 /* Rook.swift */,
+				7CF25B69287DD63A00F515F7 /* King.swift */,
+			);
+			path = Pieces;
+			sourceTree = "<group>";
+		};
+		A7075C081F8F8FD800652D0A /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				EDAEBA75287EC4860086151C /* FightViewController.swift */,
+				E88A78A82306856900D99696 /* BaseVC */,
+				A70765F31F94E1A700FA6A43 /* ChessVC */,
+				A70765F41F94E1CC00FA6A43 /* GameVC */,
+				A7A19EE42005F06400F5F9E8 /* EditVC */,
+				A70765F71F94E1FC00FA6A43 /* HistoryVC */,
+				A77E187E1F8DE5D0003A2EC5 /* HomeVC.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		A7075C091F8F8FE600652D0A /* UI+Extension */ = {
+			isa = PBXGroup;
+			children = (
+				A71E36391F90EEE200D9BB62 /* UIColor+Hex.swift */,
+				A7DC614E1F9249B5009A9205 /* UIColor+Colors.swift */,
+				A72F94181F974E73001FACC3 /* UIView+Layout.swift */,
+				A72F941A1F9753EE001FACC3 /* UIView+Tap.swift */,
+				A7854A1D1FEF5BA100C977B7 /* UIView+Window.swift */,
+				A77429CC1FF9361E00B7D480 /* UIImage+Color.swift */,
+				A78239D41FFE1B3A0078A906 /* UITableView+Update.swift */,
+			);
+			path = "UI+Extension";
+			sourceTree = "<group>";
+		};
+		A7075C0A1F8F900900652D0A /* NS+Extension */ = {
+			isa = PBXGroup;
+			children = (
+				A7DFAD7B1F910D7D00FEB8AC /* Value+Map.swift */,
+				A7592D7E1F9DFB0C00E7EA0F /* Value+Random.swift */,
+				A7EB7BB91FE419F200AA903A /* Value+Mutating.swift */,
+				A73873D51FE6557300D24753 /* Value+Meta.swift */,
+				A7B604C41FFB977400B8B5D8 /* Value+Property.swift */,
+				A7B3FD7E1F9A03A900B379AD /* Array+Split.swift */,
+				A7D4A47B20175FAF00E4FCDE /* Dictionary+Json.swift */,
+				A72534D01FE39EF900C2AFAA /* NSObject+Class.swift */,
+			);
+			path = "NS+Extension";
+			sourceTree = "<group>";
+		};
+		A7075C0C1F8F901600652D0A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A7E51D151F905DBD0054DF93 /* Wavs */,
+				A71C6A591FF0E68100D9F0F6 /* AppInformation.txt */,
+				8596C0272154D71500F85077 /* Vault.txt */,
+				A7E51D141F9058BF0054DF93 /* KaiTi.ttf */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		A7075C0D1F8F908100652D0A /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				A7075C0A1F8F900900652D0A /* NS+Extension */,
+				A7075C091F8F8FE600652D0A /* UI+Extension */,
+				A7D4A478201756CC00E4FCDE /* MultipeerConnectivity */,
+			);
+			path = Libraries;
+			sourceTree = "<group>";
+		};
+		A70765F31F94E1A700FA6A43 /* ChessVC */ = {
+			isa = PBXGroup;
+			children = (
+				A7928ADA1FF916DB000DF584 /* View */,
+				A778E4831F94E26600D28B25 /* SubViewController */,
+				A70765F51F94E1E600FA6A43 /* ChessVC.swift */,
+			);
+			path = ChessVC;
+			sourceTree = "<group>";
+		};
+		A70765F41F94E1CC00FA6A43 /* GameVC */ = {
+			isa = PBXGroup;
+			children = (
+				A72D652C1FF13B6400E44E60 /* View */,
+				A778E4841F94E26B00D28B25 /* SubViewController */,
+				A70765F11F94E1A200FA6A43 /* GameVC.swift */,
+			);
+			path = GameVC;
+			sourceTree = "<group>";
+		};
+		A70765F71F94E1FC00FA6A43 /* HistoryVC */ = {
+			isa = PBXGroup;
+			children = (
+				A7A19EE92005F0F600F5F9E8 /* View */,
+				A778E4851F94E27100D28B25 /* SubViewController */,
+				A778E47F1F94E25200D28B25 /* HistoryVC.swift */,
+			);
+			path = HistoryVC;
+			sourceTree = "<group>";
+		};
+		A72D652C1FF13B6400E44E60 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A72D652D1FF13B8700E44E60 /* GameSettingsView.swift */,
+				A77429CA1FF929DE00B7D480 /* GameMenuView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A74F8AD71FEE36E500782288 /* NavigationView */ = {
+			isa = PBXGroup;
+			children = (
+				A74F8AD81FEE370200782288 /* NavigationView.swift */,
+			);
+			path = NavigationView;
+			sourceTree = "<group>";
+		};
+		A75AB8DC206C860800FA7B1F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A75AB8E0206C860800FA7B1F /* Luna.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A770863B1F94C35E00C24D2B /* AlertView */ = {
+			isa = PBXGroup;
+			children = (
+				A770863C1F94C39100C24D2B /* LoadingAlertView.swift */,
+				A749D7561FE11BB5005B8520 /* TextAlertView.swift */,
+				A73873D11FE649A500D24753 /* BladeAlertView.swift */,
+				A761CD1A201B09C500EBB102 /* PromptAlertView.swift */,
+				A761CD1C201B09D300EBB102 /* InputAlertView.swift */,
+			);
+			path = AlertView;
+			sourceTree = "<group>";
+		};
+		A778E4831F94E26600D28B25 /* SubViewController */ = {
+			isa = PBXGroup;
+			children = (
+				A7C4E53F1F9DC20E0018595A /* FlashLayerController.swift */,
+				A71D3D7A1F9F30D500823384 /* ChessBoardController.swift */,
+			);
+			path = SubViewController;
+			sourceTree = "<group>";
+		};
+		A778E4841F94E26B00D28B25 /* SubViewController */ = {
+			isa = PBXGroup;
+			children = (
+				A7D146C71FA48A9100A512FF /* GameBoardController.swift */,
+			);
+			path = SubViewController;
+			sourceTree = "<group>";
+		};
+		A778E4851F94E27100D28B25 /* SubViewController */ = {
+			isa = PBXGroup;
+			children = (
+				A7FD59BF2012D859006C18C2 /* HistoryBoardController.swift */,
+			);
+			path = SubViewController;
+			sourceTree = "<group>";
+		};
+		A77E18771F8DE532003A2EC5 /* SupportFiles */ = {
+			isa = PBXGroup;
+			children = (
+				A72062111F8DE85300FA764E /* ChineseChess-Bridging-Header.h */,
+				A7CE56041F8DC28600641454 /* Info.plist */,
+			);
+			path = SupportFiles;
+			sourceTree = "<group>";
+		};
+		A789FD1C1F90EC5600CFC461 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				7CF25B6C287DD63A00F515F7 /* BoardView.swift */,
+				7CF25B6D287DD63A00F515F7 /* ChessView.swift */,
+				7CF25B6E287DD63A00F515F7 /* PieceView.swift */,
+				A74F8AD71FEE36E500782288 /* NavigationView */,
+				A770863B1F94C35E00C24D2B /* AlertView */,
+				A7E7ACFB1F91DE5000B29C5A /* UI+Extension */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A789FD1D1F90EC9B00CFC461 /* DataOperator */ = {
+			isa = PBXGroup;
+			children = (
+				A71E36351F90ECFA00D9BB62 /* UserPreference.swift */,
+				A71E36371F90EEC900D9BB62 /* ResourcesProvider.swift */,
+				A79128661F911F17002CC4E5 /* WavHandler.swift */,
+				A77D8F162000BDBB000D3588 /* UserFileHandler.swift */,
+				A7CD69F21F91E11700C3202A /* LayoutPartner.swift */,
+				A7607A711FE3DEDC0030039F /* Objc+Extension.swift */,
+			);
+			path = DataOperator;
+			sourceTree = "<group>";
+		};
+		A7928ADA1FF916DB000DF584 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A7928ADB1FF916F1000DF584 /* MenuView.swift */,
+				A723A7A31FFB6CEA00F780AF /* CharacterView.swift */,
+				A7A19EEB2005F39D00F5F9E8 /* HistoryView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A795CDEF1F90DBED0079546A /* Macro */ = {
+			isa = PBXGroup;
+			children = (
+				A72A4D681F90A6E000CBDAD9 /* Macro.swift */,
+			);
+			path = Macro;
+			sourceTree = "<group>";
+		};
+		A7A19EE42005F06400F5F9E8 /* EditVC */ = {
+			isa = PBXGroup;
+			children = (
+				A7A19EE72005F0B200F5F9E8 /* View */,
+				A7A19EE82005F0B700F5F9E8 /* SubViewController */,
+				A7A19EE52005F09E00F5F9E8 /* EditVC.swift */,
+			);
+			path = EditVC;
+			sourceTree = "<group>";
+		};
+		A7A19EE72005F0B200F5F9E8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A7DB8F65200DE0490088DB94 /* EditChessesView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A7A19EE82005F0B700F5F9E8 /* SubViewController */ = {
+			isa = PBXGroup;
+			children = (
+				A78C6A6A200DABA900A51BC2 /* EditBoardController.swift */,
+			);
+			path = SubViewController;
+			sourceTree = "<group>";
+		};
+		A7A19EE92005F0F600F5F9E8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A708989C201322A6009CAF5F /* HistoryMenuView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A7CE55EC1F8DC28600641454 = {
+			isa = PBXGroup;
+			children = (
+				A7CE55F71F8DC28600641454 /* ChineseChess */,
+				A7CE55F61F8DC28600641454 /* Products */,
+				3B27F5811E81FBD4FD30BE92 /* Pods */,
+				47BE21EC891108117BF7D5F1 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		A7CE55F61F8DC28600641454 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A7CE55F51F8DC28600641454 /* ChineseChess.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A7CE55F71F8DC28600641454 /* ChineseChess */ = {
+			isa = PBXGroup;
+			children = (
+				7CF25B5E287DD63A00F515F7 /* Model */,
+				7CF25B4E287DD63A00F515F7 /* img */,
+				7CF25B4C287DD63A00F515F7 /* Controller */,
+				A75AB8DB206C860800FA7B1F /* Luna.xcodeproj */,
+				A7075C0D1F8F908100652D0A /* Libraries */,
+				A795CDEF1F90DBED0079546A /* Macro */,
+				A789FD1D1F90EC9B00CFC461 /* DataOperator */,
+				A789FD1C1F90EC5600CFC461 /* View */,
+				A7075C081F8F8FD800652D0A /* ViewController */,
+				A7CE55F81F8DC28600641454 /* AppDelegate.swift */,
+				7C535409287C1B530016B25B /* SceneDelegate.swift */,
+				7C535411287C1B6C0016B25B /* Main.storyboard */,
+				7C53540F287C1B630016B25B /* ViewController.swift */,
+				7C53540D287C1B5B0016B25B /* bgMusic.mp3 */,
+				A78CC1BB1F8F783100563789 /* Launch Screen.storyboard */,
+				7C90C43D28A2BC36008D9805 /* Storyboard.storyboard */,
+				A7CE55FF1F8DC28600641454 /* Assets.xcassets */,
+				7C535413287C1B8E0016B25B /* Info.plist */,
+				7C535415287C1B9C0016B25B /* MyChessBoard.swift */,
+				7C535418287C1B9C0016B25B /* MyChessItem.swift */,
+				7C535419287C1B9C0016B25B /* MyChessTip.swift */,
+				7C535416287C1B9C0016B25B /* MyGameViewController.swift */,
+				7C535417287C1B9C0016B25B /* MyMusicPlayer.swift */,
+				A7075C0C1F8F901600652D0A /* Resources */,
+				A77E18771F8DE532003A2EC5 /* SupportFiles */,
+			);
+			path = ChineseChess;
+			sourceTree = "<group>";
+		};
+		A7D4A478201756CC00E4FCDE /* MultipeerConnectivity */ = {
+			isa = PBXGroup;
+			children = (
+				A7D4A4792017570800E4FCDE /* MultipeerManager.swift */,
+			);
+			path = MultipeerConnectivity;
+			sourceTree = "<group>";
+		};
+		A7E51D151F905DBD0054DF93 /* Wavs */ = {
+			isa = PBXGroup;
+			children = (
+				A7E51D161F905DBD0054DF93 /* 沧海龙吟.mp3 */,
+				A7E51D1A1F905DBD0054DF93 /* select.wav */,
+				A7E51D191F905DBD0054DF93 /* run.wav */,
+				A7E51D181F905DBD0054DF93 /* eat.wav */,
+				A7E51D171F905DBD0054DF93 /* check.wav */,
+				A7884A011FC9995B00691385 /* mate.m4a */,
+			);
+			path = Wavs;
+			sourceTree = "<group>";
+		};
+		A7E7ACFB1F91DE5000B29C5A /* UI+Extension */ = {
+			isa = PBXGroup;
+			children = (
+				A72A4D641F90A2A800CBDAD9 /* UIViewController+PresentVC.swift */,
+				A7E7ACFC1F91DE8E00B29C5A /* UIButton+Golden.swift */,
+				A7DC614C1F92435C009A9205 /* UIFont+KaiTi.swift */,
+				A7C8D46F1FE3A4F6006AC172 /* UIView+Border.swift */,
+			);
+			path = "UI+Extension";
+			sourceTree = "<group>";
+		};
+		E88A78A82306856900D99696 /* BaseVC */ = {
+			isa = PBXGroup;
+			children = (
+				E88A78A92306858600D99696 /* BaseViewController.swift */,
+			);
+			path = BaseVC;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A7CE55F41F8DC28600641454 /* ChineseChess */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A7CE56071F8DC28600641454 /* Build configuration list for PBXNativeTarget "ChineseChess" */;
+			buildPhases = (
+				77079B9DE0CBFC0FAEA408BA /* [CP] Check Pods Manifest.lock */,
+				A7CE55F11F8DC28600641454 /* Sources */,
+				A7CE55F21F8DC28600641454 /* Frameworks */,
+				A7CE55F31F8DC28600641454 /* Resources */,
+				D23401FE36AABAFEA363FFB0 /* [CP] Embed Pods Frameworks */,
+				A75AB921206C8C1B00FA7B1F /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A75AB920206C8C1B00FA7B1F /* PBXTargetDependency */,
+			);
+			name = ChineseChess;
+			productName = ChineseChess;
+			productReference = A7CE55F51F8DC28600641454 /* ChineseChess.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A7CE55ED1F8DC28600641454 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0900;
+				LastUpgradeCheck = 0930;
+				ORGANIZATIONNAME = StarLab;
+				TargetAttributes = {
+					A7CE55F41F8DC28600641454 = {
+						CreatedOnToolsVersion = 9.0;
+						LastSwiftMigration = 1000;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = A7CE55F01F8DC28600641454 /* Build configuration list for PBXProject "ChineseChess" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A7CE55EC1F8DC28600641454;
+			productRefGroup = A7CE55F61F8DC28600641454 /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = A75AB8DC206C860800FA7B1F /* Products */;
+					ProjectRef = A75AB8DB206C860800FA7B1F /* Luna.xcodeproj */;
+				},
+				{
+					ProductGroup = 7C76A070287B46020039A470 /* Products */;
+					ProjectRef = 7C76A06F287B46020039A470 /* SnapKit.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				A7CE55F41F8DC28600641454 /* ChineseChess */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		7C76A075287B46020039A470 /* SnapKit.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = SnapKit.framework;
+			remoteRef = 7C76A074287B46020039A470 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		7C76A077287B46020039A470 /* SnapKit Tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "SnapKit Tests.xctest";
+			remoteRef = 7C76A076287B46020039A470 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		A75AB8E0206C860800FA7B1F /* Luna.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Luna.framework;
+			remoteRef = A75AB8DF206C860800FA7B1F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A7CE55F31F8DC28600641454 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7C90C43E28A2BC36008D9805 /* Storyboard.storyboard in Resources */,
+				A79128681F9124E2002CC4E5 /* 沧海龙吟.mp3 in Resources */,
+				A7884A021FC9995C00691385 /* mate.m4a in Resources */,
+				A79128691F9124E2002CC4E5 /* check.wav in Resources */,
+				7CF25B83287DD63A00F515F7 /* black-rook.png in Resources */,
+				A791286A1F9124E2002CC4E5 /* eat.wav in Resources */,
+				7CF25B85287DD63A00F515F7 /* black-bishop.png in Resources */,
+				A791286B1F9124E2002CC4E5 /* run.wav in Resources */,
+				7CF25B84287DD63A00F515F7 /* red-rook.png in Resources */,
+				A791286C1F9124E2002CC4E5 /* select.wav in Resources */,
+				A791286D1F9124E2002CC4E5 /* KaiTi.ttf in Resources */,
+				7CF25B82287DD63A00F515F7 /* black-horse.png in Resources */,
+				7CF25B7A287DD63A00F515F7 /* red-pawn.png in Resources */,
+				7C535412287C1B6C0016B25B /* Main.storyboard in Resources */,
+				7CF25B79287DD63A00F515F7 /* black-pawn.png in Resources */,
+				7CF25B7D287DD63A00F515F7 /* black-king.png in Resources */,
+				7CF25B7F287DD63A00F515F7 /* black-guard.png in Resources */,
+				A78CC1BC1F8F783100563789 /* Launch Screen.storyboard in Resources */,
+				7CF25B81287DD63A00F515F7 /* black-cannon.png in Resources */,
+				7CF25B7E287DD63A00F515F7 /* red-cannon.png in Resources */,
+				7CF25B7B287DD63A00F515F7 /* red-horse.png in Resources */,
+				7CF25B7C287DD63A00F515F7 /* red-king.png in Resources */,
+				8596C0282154D71500F85077 /* Vault.txt in Resources */,
+				7CF25B80287DD63A00F515F7 /* red-bishop.png in Resources */,
+				A7CE56001F8DC28600641454 /* Assets.xcassets in Resources */,
+				7CF25B77287DD63A00F515F7 /* cursor.png in Resources */,
+				A71C6A5A1FF0E68100D9F0F6 /* AppInformation.txt in Resources */,
+				7C53540E287C1B5B0016B25B /* bgMusic.mp3 in Resources */,
+				7CF25B78287DD63A00F515F7 /* red-guard.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		77079B9DE0CBFC0FAEA408BA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ChineseChess-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D23401FE36AABAFEA363FFB0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ChineseChess/Pods-ChineseChess-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ChineseChess/Pods-ChineseChess-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A7CE55F11F8DC28600641454 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7CF25B91287DD63A00F515F7 /* BoardView.swift in Sources */,
+				A7CE55F91F8DC28600641454 /* AppDelegate.swift in Sources */,
+				A7C8D4701FE3A4F6006AC172 /* UIView+Border.swift in Sources */,
+				A71E363A1F90EEE200D9BB62 /* UIColor+Hex.swift in Sources */,
+				A77D8F172000BDBB000D3588 /* UserFileHandler.swift in Sources */,
+				EDAEBA76287EC4860086151C /* FightViewController.swift in Sources */,
+				A78C6A6B200DABA900A51BC2 /* EditBoardController.swift in Sources */,
+				A71E36361F90ECFA00D9BB62 /* UserPreference.swift in Sources */,
+				A7A19EEC2005F39D00F5F9E8 /* HistoryView.swift in Sources */,
+				A7B604C51FFB977400B8B5D8 /* Value+Property.swift in Sources */,
+				A7854A1E1FEF5BA100C977B7 /* UIView+Window.swift in Sources */,
+				A708989D201322A6009CAF5F /* HistoryMenuView.swift in Sources */,
+				7C535410287C1B630016B25B /* ViewController.swift in Sources */,
+				A72D652E1FF13B8700E44E60 /* GameSettingsView.swift in Sources */,
+				7C53541A287C1B9C0016B25B /* MyChessBoard.swift in Sources */,
+				A749D7571FE11BB5005B8520 /* TextAlertView.swift in Sources */,
+				A70765F61F94E1E600FA6A43 /* ChessVC.swift in Sources */,
+				7CF25B8D287DD63A00F515F7 /* Cannon.swift in Sources */,
+				7C53541D287C1B9C0016B25B /* MyChessItem.swift in Sources */,
+				A72F94191F974E73001FACC3 /* UIView+Layout.swift in Sources */,
+				A7DC614F1F9249B5009A9205 /* UIColor+Colors.swift in Sources */,
+				A77429CB1FF929DE00B7D480 /* GameMenuView.swift in Sources */,
+				7CF25B88287DD63A00F515F7 /* Piece.swift in Sources */,
+				7CF25B8A287DD63A00F515F7 /* Guard.swift in Sources */,
+				7C53541E287C1B9C0016B25B /* MyChessTip.swift in Sources */,
+				A71D3D7B1F9F30D500823384 /* ChessBoardController.swift in Sources */,
+				A7D4A47A2017570800E4FCDE /* MultipeerManager.swift in Sources */,
+				A761CD1B201B09C500EBB102 /* PromptAlertView.swift in Sources */,
+				7CF25B86287DD63A00F515F7 /* Utilities.swift in Sources */,
+				A7592D7F1F9DFB0C00E7EA0F /* Value+Random.swift in Sources */,
+				A73873D21FE649A500D24753 /* BladeAlertView.swift in Sources */,
+				A72A4D651F90A2A800CBDAD9 /* UIViewController+PresentVC.swift in Sources */,
+				E88A78AA2306858600D99696 /* BaseViewController.swift in Sources */,
+				7CF25B90287DD63A00F515F7 /* ChessBrain.swift in Sources */,
+				7C53541B287C1B9C0016B25B /* MyGameViewController.swift in Sources */,
+				A72F941B1F9753EE001FACC3 /* UIView+Tap.swift in Sources */,
+				A7EB7BBA1FE419F200AA903A /* Value+Mutating.swift in Sources */,
+				A778E4801F94E25200D28B25 /* HistoryVC.swift in Sources */,
+				A74F8AD91FEE370200782288 /* NavigationView.swift in Sources */,
+				7CF25B92287DD63A00F515F7 /* ChessView.swift in Sources */,
+				A71E36381F90EEC900D9BB62 /* ResourcesProvider.swift in Sources */,
+				A7928ADC1FF916F1000DF584 /* MenuView.swift in Sources */,
+				A78239D51FFE1B3A0078A906 /* UITableView+Update.swift in Sources */,
+				7CF25B76287DD63A00F515F7 /* ChessViewController.swift in Sources */,
+				A7B3FD7F1F9A03A900B379AD /* Array+Split.swift in Sources */,
+				A7DC614D1F92435C009A9205 /* UIFont+KaiTi.swift in Sources */,
+				A7FD59C02012D859006C18C2 /* HistoryBoardController.swift in Sources */,
+				A72534D11FE39EF900C2AFAA /* NSObject+Class.swift in Sources */,
+				7CF25B89287DD63A00F515F7 /* Pawn.swift in Sources */,
+				A79128671F911F17002CC4E5 /* WavHandler.swift in Sources */,
+				A7DB8F66200DE0490088DB94 /* EditChessesView.swift in Sources */,
+				A7A19EE62005F09E00F5F9E8 /* EditVC.swift in Sources */,
+				7CF25B8B287DD63A00F515F7 /* Horse.swift in Sources */,
+				7C53540C287C1B540016B25B /* SceneDelegate.swift in Sources */,
+				7CF25B93287DD63A00F515F7 /* PieceView.swift in Sources */,
+				A77E187F1F8DE5D0003A2EC5 /* HomeVC.swift in Sources */,
+				7C53541C287C1B9C0016B25B /* MyMusicPlayer.swift in Sources */,
+				A723A7A41FFB6CEA00F780AF /* CharacterView.swift in Sources */,
+				A761CD1D201B09D300EBB102 /* InputAlertView.swift in Sources */,
+				7CF25B8F287DD63A00F515F7 /* King.swift in Sources */,
+				A70765F21F94E1A200FA6A43 /* GameVC.swift in Sources */,
+				A7E7ACFD1F91DE8E00B29C5A /* UIButton+Golden.swift in Sources */,
+				A7D146C81FA48A9100A512FF /* GameBoardController.swift in Sources */,
+				A7DFAD7C1F910D7D00FEB8AC /* Value+Map.swift in Sources */,
+				A72A4D691F90A6E000CBDAD9 /* Macro.swift in Sources */,
+				7CF25B8E287DD63A00F515F7 /* Rook.swift in Sources */,
+				A77429CD1FF9361E00B7D480 /* UIImage+Color.swift in Sources */,
+				A7CD69F31F91E11700C3202A /* LayoutPartner.swift in Sources */,
+				A770863D1F94C39100C24D2B /* LoadingAlertView.swift in Sources */,
+				A7C4E5401F9DC20E0018595A /* FlashLayerController.swift in Sources */,
+				A7607A721FE3DEDC0030039F /* Objc+Extension.swift in Sources */,
+				7CF25B8C287DD63A00F515F7 /* Bishop.swift in Sources */,
+				A73873D61FE6557300D24753 /* Value+Meta.swift in Sources */,
+				7CF25B87287DD63A00F515F7 /* Board.swift in Sources */,
+				A7D4A47C20175FAF00E4FCDE /* Dictionary+Json.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A75AB920206C8C1B00FA7B1F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Luna;
+			targetProxy = A75AB91F206C8C1B00FA7B1F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		A7CE56051F8DC28600641454 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		A7CE56061F8DC28600641454 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A7CE56081F8DC28600641454 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BBACABA43398033918CA7F83 /* Pods-ChineseChess.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 86M85RV794;
+				INFOPLIST_FILE = "$(SRCROOT)/ChineseChess/SupportFiles/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.sulioppa;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/ChineseChess/SupportFiles/ChineseChess-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		A7CE56091F8DC28600641454 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0960C69523E81DB1C0565640 /* Pods-ChineseChess.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 86M85RV794;
+				INFOPLIST_FILE = "$(SRCROOT)/ChineseChess/SupportFiles/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.sulioppa;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/ChineseChess/SupportFiles/ChineseChess-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A7CE55F01F8DC28600641454 /* Build configuration list for PBXProject "ChineseChess" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A7CE56051F8DC28600641454 /* Debug */,
+				A7CE56061F8DC28600641454 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A7CE56071F8DC28600641454 /* Build configuration list for PBXNativeTarget "ChineseChess" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A7CE56081F8DC28600641454 /* Debug */,
+				A7CE56091F8DC28600641454 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A7CE55ED1F8DC28600641454 /* Project object */;
+}
